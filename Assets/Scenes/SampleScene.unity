@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 901203083}
   - component: {fileID: 901203086}
   - component: {fileID: 901203085}
+  - component: {fileID: 901203087}
   m_Layer: 0
   m_Name: snake
   m_TagString: Untagged
@@ -468,6 +469,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &901203087
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901203082}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 279919ed456af497ea7a2f65634e62e5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2056992980
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +499,7 @@ GameObject:
   - component: {fileID: 2056992982}
   - component: {fileID: 2056992981}
   - component: {fileID: 2056992983}
+  - component: {fileID: 2056992984}
   m_Layer: 0
   m_Name: atack
   m_TagString: Untagged
@@ -567,3 +588,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0.3944373, y: 0.694136}
   m_Size: {x: 0.3614912, y: 0.36149144}
   m_Direction: 0
+--- !u!95 &2056992984
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056992980}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f0dcee7757db8435baceedd94ac58458, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
