@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620498091027491100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.15, z: 0}
+  m_LocalPosition: {x: 0, y: -1.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4608882706450970865}
@@ -186,7 +186,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &4608882706450970866
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -200,8 +200,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.029791236, y: -0.5635638}
-  m_Size: {x: 0.6936505, y: 0.8512058}
+  m_Offset: {x: 0.02492562, y: -0.5635638}
+  m_Size: {x: 0.68391925, y: 0.8512058}
   m_Direction: 0
 --- !u!95 &4608882706450970867
 Animator:
@@ -234,8 +234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec6cfd0a432a9ec4683b137656e6e28c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  jumpForce: 0
+  speed: 5
+  jumpForce: 300
   halth: 0
   groundCheck: {fileID: 853377654900846624}
 --- !u!1 &6075225591862437472

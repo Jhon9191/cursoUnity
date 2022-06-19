@@ -26,18 +26,24 @@ public class Player : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        trans = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+
+        if ( Input.GetButtonDown("Jump") && grounded)
+        {
+            jumping = true;
+        }
+
     }
 
     private void FixedUpdate()
     {
-
+        //SCRIPT PARA VIRAR O JOGADOR
         float move = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2(move * speed, rb2d.velocity.y);
 
@@ -45,12 +51,19 @@ public class Player : MonoBehaviour
             Flip();
         }
 
+        //SCRIPT PARA PULAR O JOGADOR
+        if (jumping)
+        {
+            rb2d.AddForce(new Vector2(0, jumpForce));
+            jumping = false;
+        }
+
     }
 
     void Flip()
     {
         facingRight = !facingRight;
-        trans.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 
 }
