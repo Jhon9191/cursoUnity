@@ -32,8 +32,8 @@ public class Player : MonoBehaviour
     void Update()
     {
 
+        //VERIFICA SE O PLAYER ESTA COLIDANDO COM O CHÃO
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-
         if ( Input.GetButtonDown("Jump") && grounded)
         {
             jumping = true;
@@ -54,9 +54,11 @@ public class Player : MonoBehaviour
         //SCRIPT PARA PULAR O JOGADOR
         if (jumping)
         {
-            rb2d.AddForce(new Vector2(0, jumpForce));
+            rb2d.AddForce(new Vector2(0f, jumpForce));
             jumping = false;
         }
+
+        SetAnimations();
 
     }
 
@@ -64,6 +66,13 @@ public class Player : MonoBehaviour
     {
         facingRight = !facingRight;
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+    }
+
+    void SetAnimations()
+    {
+        anim.SetFloat("ValY", rb2d.velocity.y);
+        anim.SetBool("JumpFall", !grounded);
+        anim.SetBool("Walk", rb2d.velocity.x != 0f && grounded);
     }
 
 }
